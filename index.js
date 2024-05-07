@@ -16,11 +16,11 @@ const usersLuminosity = argv[3]; // declaring users input for luminosity
 const usersColor = argv[2]; // declaring users input for color
 
 // print the pattern
-function hashtagPattern(usersColor) {
+function hashtagPattern(anyColor) {
   const fullOfHashtags = '#'.repeat(31);
   const someHashtags = '#'.repeat(5);
   const noHashtags = ' '.repeat(21);
-  const hexCodeColor = ' '.repeat(7) + usersColor + ' '.repeat(7);
+  const hexCodeColor = ' '.repeat(7) + anyColor + ' '.repeat(7);
 
   const pattern = `${fullOfHashtags}
 ${fullOfHashtags}
