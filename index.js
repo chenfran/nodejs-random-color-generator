@@ -2,18 +2,13 @@ import { argv } from 'node:process'; // store users input
 import chalk from 'chalk'; // import colors to node.js - the package is called 'chalk'
 import randomColor from 'randomcolor'; // return random color in hex code
 
-// print anything in a specified color
-// console.log(chalk.hex('#ff0000')('#'));
-// console.log(chalk.red('#'));
-
-// print anything in a random color
-// console.log(chalk.hex(randomColor())('#'));
-
-// console.log(colorFromUser); // output: colorFromUser but we want the string to be colored [x]
-
 const colorFromSystem = randomColor(); // declaring a variable for the function
 const usersLuminosity = argv[3]; // declaring users input for luminosity
 const usersColor = argv[2]; // declaring users input for color
+const finalColor = randomColor({
+  luminosity: usersLuminosity,
+  hue: usersColor,
+});
 
 // print the pattern
 function hashtagPattern(anyColor) {
@@ -36,11 +31,6 @@ ${fullOfHashtags}`;
 }
 
 hashtagPattern(usersColor);
-
-const finalColor = randomColor({
-  luminosity: usersLuminosity,
-  hue: usersColor,
-});
 
 if (argv.length < 3) {
   console.log(chalk.hex(colorFromSystem)(hashtagPattern(colorFromSystem)));
