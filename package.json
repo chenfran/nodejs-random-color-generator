@@ -19,7 +19,6 @@
     "@types/randomcolor": "^0.5.9",
     "eslint-config-upleveled": "^8.1.0",
     "prettier": "^3.2.5",
-    "strip-ansi": "^7.1.0",
     "typescript": "^5.4.5"
   }
 }
